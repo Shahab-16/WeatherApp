@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet" />
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="wrapper">
+        
+        <!--Title-->
+        <h1 class="title">WEATHER APP</h1>
+
+
+        <!--Tab_Container-->
+        <div class="tab_container">
+            <div class="tab" data-userWeather>
+                Your Weather
+            </div>
+            <div class="tab" data-searchWeather>
+                Search Weather
+            </div>
+        </div>
+
+
+        <!--Main_Container-->
+        <div class="main_container">
+
+
+            <!--Grant_Permission-->
+            <div class="sub_section grant_permission" data-grantPermission>
+                <img src="./images/location.png" alt="">
+                <h2>Grant Location Access</h2>
+                <p>Allow access to get weather information</p>
+                <button data-Grant_access_btn>Grant Access</button>
+            </div>
+
+            <!--Search_Bar-->
+            <form  class="search_section" action="" data-search>
+                <input data-input type="text" placeholder="Seach for a city">
+                <button type="submit" class="btn">
+                    <img src="./images/search.png" alt="" width="20" height="20" loading="lazy">
+                </button>
+            </form>
+
+            <!--Loading_section-->
+            <div class="sub_section loading_section" data-loading>
+                <img src="./images/loading.gif" alt="">
+                <p>Loading...</p>
+            </div>
+
+
+            <!--Error_section-->
+            <div class="sub_section error_section" data-error>
+                <img src="./images/not-found.png" alt="">
+                <p>Sorry!! City Not Found</p>
+                <p>Out of range</p>
+            </div>
+
+
+            
+            <!--Weather_section-->
+            <div class="sub_section weather_section" data-weather>
+
+                <div class="location">
+                    <p data-place></p>
+                    <img data-flag>
+                </div>
+
+                <div data-weather_condition></div>
+
+                <img data-weather_condition_img src="" alt="">
+
+                <div data-temp></div>
+
+                <div class="card_container">
+
+                    <!--card 1-->
+                    <div class="card">
+                        <img src="./images/wind.png" alt="">
+                        <p>WINDSPEED</p>
+                        <p data-windSpeed></p>
+                    </div>
+
+                    <!--card 2-->
+                    <div class="card">
+                        <img src="./images/humidity.png" alt="">
+                        <p>HUMIDITY</p>
+                        <p data-humidity></p>
+                    </div>
+
+                    <!--card 3-->
+                    <div class="card">
+                        <img src="./images/cloud.png" alt="">
+                        <p>CLOUDS</p>
+                        <p data-pressure></p>
+                    </div>
+
+
+
+                </div>
+
+
+
+
+
+
+
+
+            </div>
+
+
+
+
+
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+
+
+    <script src="index.js"></script>
+</body>
+</html>
